@@ -1,0 +1,35 @@
+<header>
+  <nav class="main-nav">
+    <input type="checkbox" id="check" />
+    <label for="check" class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <a href="/" class="logo">Haberler</a>
+    <ul class="navlinks">
+    </ul>
+  </nav>
+</header>
+
+<div class="sablon">
+  <div class="columns is-gapless is-multiline is-mobile">
+    <div class=" box column kart" style="margin: 1em;" *ngFor="let article of (haberler | async)?.articles; index as i">
+      <div class="haber">
+        <div class="card-image">
+          <figure class="img-article">
+            <img src="{{ article.urlToImage }}">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <p class="title is-4">{{ article.title }}</p>
+              <p class="subtitle is-6">{{ article.source.name }}</p>
+            </div>
+          </div>
+
+          <div class="content">{{ article.description }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+@import '@angular/material/prebuilt-themes/pink-bluegrey.css';
+@import 'bulma/css/bulma.css';
+
+body {
+    background:rgb(250, 248, 248);
+}
+
+/*color options:
+deeppurple-amber.css
+indigo-pink.css
+pink-bluegrey.css
+purple-green.css
+*/
